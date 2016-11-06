@@ -21,7 +21,7 @@
 \renewcommand*\familydefault{\sfdefault}
 
 % User defined
-\def\year{2016}
+\def\year{2017}
 % Names of Holidays are inserted by employing this macro
 \def\termin#1#2{
   \node [anchor=north west, text width= 7cm] at
@@ -45,7 +45,7 @@
 \begin{center}
 \begin{tikzpicture}[every day/.style={anchor = north}]
 \calendar[
-  dates=\year-11-01 to \year-12-31,
+  dates=\year-01-01 to \year-02-28,
   name=cal,
   day yshift = 2 em,
   day code=
@@ -105,11 +105,12 @@
 ];
 
 % Print name of Holidays
-\termin{\year-11-01}{Mindenszentek}
-\termin{\year-12-24}{Szenteste}
-\termin{\year-12-25}{Karácsony 1.\ nap}
-\termin{\year-12-26}{Karácsony 2.\ nap}
-\termin{\year-12-31}{Szilveszter}
+\termin{\year-01-01}{Újév}
+%\termin{\year-11-01}{Mindenszentek}
+%\termin{\year-12-24}{Szenteste}
+%\termin{\year-12-25}{Karácsony 1.\ nap}
+%\termin{\year-12-26}{Karácsony 2.\ nap}
+%\termin{\year-12-31}{Szilveszter}
 \end{tikzpicture}
 \end{center}
 \end{document}
