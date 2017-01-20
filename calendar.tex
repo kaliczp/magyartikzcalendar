@@ -14,7 +14,7 @@
 \usepackage{fancyhdr}		% header and footer
 \usepackage{fix-cm}		% Large year in header
 
-\usepackage[portrait, headheight = 2cm, margin=.5cm,
+\usepackage[portrait, headheight = 2cm, margin=.45cm,
   top = 3.2cm, nofoot]{geometry}
 \usetikzlibrary{calc}
 \usetikzlibrary{calendar}
@@ -29,10 +29,10 @@
 }
 
 %Header
-\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\headrulewidth}{0.5pt}
 \setlength{\headheight}{10ex}
 \chead{
-  \fontsize{40}{50}\selectfont\textbf{\year}
+  \fontsize{30}{35}\selectfont\textbf{\year}
   \Large\textbf{Naptár}\hfill
 }
 %Footer
@@ -52,7 +52,7 @@
   {
     % Ez rajzolja a dobozt a nap számával
     \node[name=\pgfcalendarsuggestedname,every day,shape=rectangle,
-    minimum height= .8cm, text width = 9cm, draw = gray]{\tikzdaytext};
+    minimum height= .8cm, text width = 8.7cm, draw = gray]{\tikzdaytext};
     % Ez írja a nap nevét translator package dictionary kell a magyarhoz
     \draw (-4.1 cm, -.1ex) node[anchor = west]{\footnotesize%
       \pgfcalendarweekdayshortname{\pgfcalendarcurrentweekday}};
@@ -65,7 +65,7 @@
       \pgftransformxshift{9cm}
       % Print month name 
       \draw (0,0)node [shape=rectangle, minimum height= .8cm,
-        text width = 9cm, fill = lightgray, text= white, draw = red, text centered]
+        text width = 8.7cm, fill = lightgray, text= white, draw = red, text centered]
         {\textbf{\pgfcalendarmonthname{\pgfcalendarcurrentmonth}}};
     }{}
     \ifdate{workday}
